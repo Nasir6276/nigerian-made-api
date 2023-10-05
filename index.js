@@ -8,7 +8,9 @@ const sellerRoute = require('./routes/seller')
 dotenv.config();
 app.use(express.json())
 
-mongoose.connect(process.env.MONGO_URL, {
+const uri = 'mongodb+srv://Nasir6276:Ni54562766@nasir.unkqket.mongodb.net/waitlist?retryWrites=true&w=majority'
+
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(console.log('connected to db')).catch((err) => console.log(err));
