@@ -10,11 +10,15 @@ app.use(express.json())
 
 const uri = 'mongodb+srv://Nasir6276:Ni54562766@nasir.unkqket.mongodb.net/waitlist?retryWrites=true&w=majority'
 
+
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(console.log('connected to db')).catch((err) => console.log(err));
 
+app.get('/', (req, res) => {
+    res.json('app is running')
+})
 app.use('/api', buyerRoute)
 app.use('/api', sellerRoute)
 
