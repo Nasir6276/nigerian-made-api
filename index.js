@@ -22,6 +22,6 @@ app.get('/', (req, res) => {
 app.use('/api', buyerRoute)
 app.use('/api', sellerRoute)
 
-app.listen('3.10.19.255', () => {
+app.listen('80', () => {
     console.log('backend is running.');
 })
