@@ -6,7 +6,12 @@ const buyerRoute = require('./routes/buyer')
 const sellerRoute = require('./routes/seller')
 const cors = require('cors')
 
-app.use(cors())
+const corsOptions ={
+    origin:'https://nigerian-made.com', 
+    credentials:true, 
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 dotenv.config();
 app.use(express.json())
 
