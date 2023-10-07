@@ -4,9 +4,11 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const buyerRoute = require('./routes/buyer')
 const sellerRoute = require('./routes/seller')
+const cors = require('cors')
 
 dotenv.config();
 app.use(express.json())
+app.use(cors())
 
 const uri = 'mongodb+srv://Nasir6276:Ni54562766@nasir.unkqket.mongodb.net/waitlist?retryWrites=true&w=majority'
 
