@@ -7,7 +7,8 @@ const sellerRoute = require('./routes/seller')
 const cors = require('cors')
 
 const corsOptions ={
-    origin:'https://nigerian-made.com', 
+    origin:'*', 
+    // origin:'https://nigerian-made.com', 
     credentials:true, 
     optionSuccessStatus:200
 }
