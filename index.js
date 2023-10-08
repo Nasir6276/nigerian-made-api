@@ -12,7 +12,7 @@ const corsOptions ={
     credentials:true, 
     optionSuccessStatus:200
 }
-app.use(cors(corsOptions));
+app.use(cors());
 dotenv.config();
 app.use(express.json())
 
